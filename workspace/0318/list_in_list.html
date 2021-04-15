@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>목록 안에 목록 태그</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <ul>        <!-- 목록 구분단계는 최대 3단계, 그 이후 부터는 구분x -->
+        <li>목록 태그 항목</li>
+        <ul>
+            <li>서브 항목</li>
+            <li>서브 항목</li>
+            <ul>
+                <li>서브 서브 항목</li>
+                <li>서브 서브 항목</li>
+                <li>서브 서브 항목</li>
+                <li>서브 서브 항목</li>
+            </ul>
+            <li>서브 항목</li>
+            <li>서브 항목</li>
+        </ul>
+        <li>목록 태그 항목</li>
+        <li>목록 태그 항목</li>
+        <li>목록 태그 항목</li>
+    </ul>
+    <hr>    <!-- <hr> : 줄 띄우기(선 그려진 형태) -->
+    <ol>
+        <li>순번 있는 항목</li>
+        <ol type="A">       <!-- type : 1--A--a--I--i, 옵션값, 리스트 순서 표기 형태, html에서 수정 권장x css에서 변경할 것 -->
+            <li>순번 있는 서브 항목</li>
+            <li>순번 있는 서브 항목</li>
+            <li>순번 있는 서브 항목</li>
+        </ol>
+        <li>순번 있는 항목</li>
+        <li>순번 있는 항목</li>
+        <li>순번 있는 항목</li>
+    </ol>
+</body>
+</html>

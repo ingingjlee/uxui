@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>카카오계정</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="/0402/css/kakao_sign_up.css">
+</head>
+
+<body>
+    <div class="layout-wrapper">
+        <header>
+            <div>
+                <h1><img src="/0402/img/kakao-logo.png" alt="카카오계정"></h1>
+            </div>
+        </header>
+        <section>
+            <article>
+                <h2>카카오계정 정보를 입력해 주세요</h2>
+                <form action="" method="get">
+                    <div class="id">
+                        <label for="id">
+                            <h3>카카오계정 이메일</h3>
+                            <input type="text" title="id" id="id" placeholder="아이디입력">
+                            <p>@kakao.com</p>
+                        </label>
+                        <ul>
+                            <li>입력한 카카오메일로 카카오계정에 로그인할 수 있습니다.</li>
+                            <li>한번 만든 카카오메일은 변경할 수 없으니, 오타가 없도록 신중히 확인해주세요.</li>
+                            <li>생성한 카카오메일로 카카오계정과 관련한 알림을 받아볼 수 있습니다.</li>
+                        </ul>
+                    </div>
+                    <div class="password">
+                        <label for="password">
+                            <h3>비밀번호</h3>
+                            <input type="password" title="password" id="password" placeholder="비밀번호(8~32자리)">
+                            <input type="text" title="password_check" id="password_check" placeholder="비밀번호 재입력">
+                        </label>
+                    </div>
+                    <div class="nick_name">
+                        <label for="character_name">
+                            <h3>닉네임</h3>
+                            <input type="text" title="character_name" id="name" placeholder="닉네임을 입력하세요" maxlength="20">
+                            <p>0/20</p>
+                        </label>
+                    </div>
+                    <div class="phone-number">
+                        <label for="phone-number">
+                            <h3>전화번호</h3>
+                            <div class="input-cell">
+                                <select name="general" id="general">
+                                    <option value="korea">+82</option>
+                                    <option value="phone">010</option>
+                                </select>
+                                <input type="tel" title="phone-number" id="number" placeholder="전화번호">
+                            </div>
+                            <button>인증번호 전송</button>
+                        </label>
+                    </div>
+                    <div class="next">
+                        <button type="submit">다음</button>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>동영상 태그</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <!-- 
+        controls : 동영상 컨트롤러 표시 
+        loop : 반복재생
+        autoplay : 자동재생  // 브라우저 보안정책에 따라 적용여부 다름
+        poster : 동영상 썸네일 이미지
+    -->
+    <video src="resource/mountains.mp4" poster="sea2.jpg" controls loop></video>
+    <!-- 브라우저 종류에 따라 지원되는 포맷으로 재생 -->
+    <video width="600">
+        <source src="resource/mountains.mp4" type="video/mp4">
+        <source src="resource/mountains.mp4" type="video/ogv">
+    </video>
+    <hr>
+    <!-- iframe : 다른 서버 혹은 페이지 내에 있는 동영상 긁어올 때 사용하는 태그 -->
+    <!-- youtube 동영상 넣는 법 : youtube영상 하단 공유 클릭 후 iframe 긁어서 복붙 -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/lAhEdj4k6Jk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- naver 동영상 넣는 법 : naver동영상 하단 공유 클릭 후 iframe 긁어서 복붙 -->
+    <iframe src='https://tv.naver.com/embed/19049411?autoPlay=true' frameborder='no' scrolling='no' marginwidth='0' marginheight='0' WIDTH='544' HEIGHT='306' allow='autoplay' allowfullscreen></iframe>
+    <!-- kakao tv의 경우 저작권에 따라 제한 -->
+    <iframe title="👋자꾸만 손이가요 🌽마약옥수수튀김 How to make crispy corn" width="640" height="360" src="https://play-tv.kakao.com/embed/player/cliplink/406020897?service=player_share" allowfullscreen frameborder="0" scrolling="no" allow="autoplay, encrypted-media"></iframe>
+    <!-- 트위치 긁어오기도 동일 -->
+    <iframe src="https://player.twitch.tv/?channel=johnny3047258&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+</body>
+</html>

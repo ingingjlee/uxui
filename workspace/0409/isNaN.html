@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>isNaN 함수</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        /* 
+            isNaN 함수 : 숫자유무 판독 (숫자일 경우 : false, 아닐 경우 : true)
+        */
+        document.write(isNaN(1234), "<br>");
+        document.write(isNaN("1234"), "<br>");
+        document.write(isNaN("sadfas"), "<br>");
+        document.write(isNaN(true), "<hr>");
+
+        document.write(isNaN(NaN), "<br>");  // 숫자가 아닐때
+        document.write(isNaN(undefined), "<br>");  // 값이 할당되지 않은 변값
+        document.write(isNaN(null), "<hr>");   // 비어있는 값(아무런 값이 아닌 값, default = 0)
+
+        document.write(Number(true), "<br>");
+        document.write(Number(false), "<br>");
+        document.write(Number(null), "<br>");
+        document.write(Number("1324"), "<hr>");
+    </script>
+</head>
+<body>
+</body>
+</html>

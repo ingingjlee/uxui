@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        // 이미 이미지가 로드된 후(모든 태그 로그된 후) ==> 모든 태그가 로드된 후 해야 될 일 작성
+        window.onload = function() {
+            // 이미지 태그 선택
+            var img = document.getElementsByTagName("img")[0];
+            // 해당 이벤트는 이미 실행된 후 실행되기 때문에 출력X
+            img.onload = function() {
+                alert("img load");
+            };
+        }
+
+        function imgLoad() {
+            alert("이미지 태그 로드");
+        }
+
+        // ==> 2번째부터 실행된 후 첫번째 function 실행
+
+        // var img = document.getElementsByTagName("img")[0];
+        // img.onload = imgLoad;   // onload 이벤트에 imgLoad 함수 저장
+
+        window.onunload = function (e) {
+            alert("window unload");
+        }
+    </script>
+</head>
+<body>
+    <h1>onload 이벤트 테스트</h1>
+    <img src="/jellyfish.jpg" alt="" onload="imgLoad()">
+    <h2>h2 영역</h2>
+</body>
+</html>

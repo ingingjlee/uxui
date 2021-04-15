@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>margin</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .box1 {
+            margin: 30px;   /* 상하좌우 동일값 적용 */
+        }
+        .box2 {
+            margin: 20px 40px; /* 상하값, 좌우값 적용 */
+        }
+        .box3 {
+            margin: 10px 20px 30px; /* 위값, 좌우값, 아래값 */
+        }
+        .box4 {
+            margin: 10px 20px 30px 40px;    /* 위값, 오른쪽값, 아래값, 왼쪽값 */
+        }
+        .box5 {
+            margin: 20px auto;
+            text-align: center;     /* text-align ==> inline(글자취급) 형태만 적용, block 적용x */
+        }
+        .sub {
+            width: 50px;
+            height: 50px;
+            margin: 20px auto;      /* block 형태 태그 가운데 정렬 ==> margin: (상하값), auto */
+        }
+        p {
+            border: 1px solid black;
+            margin-top: 10px;       /* margin 영역 직접 선택하여 적용 가능 : margin-top, margin-bottom, margin-left, margin-right */
+            margin-bottom: 20px;
+            margin-left: 5px;
+            margin-right: 7px;
+        }
+        span {
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <hr>
+    <div class="box2"></div>
+    <hr>
+    <div class="box3"></div>
+    <hr>
+    <div class="box4"></div>
+    <hr>
+    <div class="box5">박스 가운데 정렬
+        <div class="sub"></div>
+    </div>
+    <hr>
+    <p>block <span>태그</span> 영역</p>
+</body>
+</html>

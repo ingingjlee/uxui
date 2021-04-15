@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>background-image</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        div {
+            width: 1000px;
+            height: 700px;
+            border: 20px dashed black;
+            padding: 50px;
+            /* 
+                background-image
+                    url()로 이미지 경로 지정
+                background-repeat
+                    no-repeat : 반복안함
+                    repeat-x : x축 반복
+                    repeat-y : y축 반복
+                    repeat : x,y축 반복, 기본값
+                background-size
+                    x, y값 - px, %로 지정 가능
+                    cover : 가로세로 중 더 짧은 영역 기준으로 100%, 이미지 잘림
+                    contain : 가로세로 중 더 긴 영역 기준으로 100%, content영역 모두 못채울 수도 있음
+                background-pisition
+                    배경 이미지 위치 설정 시, px, %단위로 좌표 설정
+                    top, center, bottom, right, left
+                background-origin
+                    배경 이미지 적용 영역 지정
+                    border-box, padding-box, content-box ...
+             */
+            background-image: url(/0325/img/dog.jpg);
+            background-repeat: no-repeat;
+            background-size: 300px;
+            background-position: top left;
+            background-origin: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

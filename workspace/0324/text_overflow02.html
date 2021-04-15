@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        p {
+            width: 200px;
+            border: 1px solid black;
+            white-space: nowrap;
+            /* 
+                overflow 속성
+                    내용이 너비를 벗어났을 때 처리(스크롤, 숨김)
+                    scroll :  영역 내 스크롤바 생성
+                    hidden :  벗어난 영역 숨김
+             */
+            overflow: hidden;
+            /* 
+                text-overflow 속성
+                    white-space와 함께 사용(white-space: nowrap;)
+                    ellipsis : 벗어난 영역 줄임표시 ...
+             */
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <p>국가는 농·어민과 중소기업의 자조조직을 육성하여야 하며, 그 자율적 활동과 발전을 보장한다. 법관은 탄핵 또는금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니하며, 징계처분에 의하지 아니하고는
+        정직·감봉 기타 불리한 처분을 받지 아니한다.</p>
+</body>
+
+</html>

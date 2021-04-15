@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>회원가입 예제</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="/0405/kakao.css">
+</head>
+
+<body>
+    <h1>Kakao</h1>
+    <div class="container">
+        <form action="" method="POST">
+            <h2>카카오계정 정보를 입력해 주세요</h2>
+            <ul>
+                <li><label for="id">카카오계정 이메일</label></li>
+                <li class="border_bottom"><input type="text" name="id" id="id" placeholder="아이디 입력"><span class="sub_txt">@kakao.com</span></li>
+                <ul>
+                    <li>입력한 카카오메일로 카카오계정에 로그인 할 수 있습니다.</li>
+                    <li>한번 만든 카카오메일은 변경할 수 없으니, 오타가 없도록 신중히 확인해주세요.</li>
+                    <li>생성한 카카오메일로 카카오계정과 관련한 알림을 받아볼 수 있습니다.</li>
+                </ul>
+                <li><label for="pass">비밀번호</label></li>
+                <li class="border_bottom"><input type="password" id="pass" name="password" placeholder="비밀번호(8~32자리)" minlength="8"
+                        maxlength="32"></li>
+                <li class="border_bottom"><input type="password" id="pass_chk" placeholder="비밀번호 재입력" minlength="8" maxlength="32"></li>
+                <li><label for="nick">닉네임</label></li>
+                <li><input type="text" name="nick" id="nick" placeholder="닉네임을 입력하세요"><span class="sub_txt">0/20</span></li>
+                <li><label for="tel">전화번호</label></li>
+                <li class="border_bottom"><select name="gcode" id="gcode">
+                        <option value="82" selected>+82</option>
+                        <option value="1">+1</option>
+                        <option value="84">+84</option>
+                        <option value="55">+55</option>
+                    </select>
+                    <input type="text" name="tel" id="tel" placeholder="전화번호" class="border_left">
+                </li>
+                <li><button type="button" class="btn_send_no">인증번호 전송</button></li>
+                <li><button type="submit" class="btn_submit">다음</button></li>
+            </ul>
+        </form>
+    </div>
+</body>
+
+</html>

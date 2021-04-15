@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>로그인창 예제</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .layout-wrapper {
+            width: 200px;
+            margin: 20px auto;
+        }
+
+        .layout-wrapper * {
+            width: 200px;
+            margin: 2px 0;
+            display: inline-block;
+        }
+
+        form input {
+            width: 100%;
+            font-size: 16px;
+            padding: 4px 8px;
+            border: 1px solid grey;
+            border-radius: 5px;
+            background-size: 20px;
+            background-position: center;
+            background-position-x: 6px;
+            background-repeat: no-repeat;
+            padding-left: 32px;
+        }
+
+        form .sign_in {
+            margin-bottom: 10px;
+        }
+
+        form .id {
+            background-image: url(/0331/img/user.png);
+            background-position-x: 5px;
+        }
+
+        form .password {
+            background-image: url(/0331/img/key.png);
+            background-size: 18px;
+        }
+
+        form .sign_up button {
+            width: 100%;
+            margin: 4px 0;
+            padding: 8px;
+            color: white;
+            background-color: cornflowerblue;
+            border-style: none;
+            border-radius: 5px;
+        }
+
+        form .sign_up button:hover {
+            background-color: #89aff5;
+            box-shadow: 1px 1px 5px #adadad;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout-wrapper">
+        <form action="get">
+            <div class="sign_in">
+                <input type="text" id="user_id" placeholder="아이디를 입력하세요" class="id">
+                <input type="password" id="user_pw"placeholder="암호를 입력하세요" class="password">
+            </div>
+            <div class="sign_up">
+                <button>로그인</button>
+                <button>회원가입</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

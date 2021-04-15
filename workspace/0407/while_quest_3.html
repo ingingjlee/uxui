@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>조건 반복문 예제 03</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        /* 
+            숫자 하나를 입력받으면,
+            해당 숫자의 팩토리얼 값을 출력
+        */
+
+        // 변수 3개
+        // var n = Number(prompt("숫자를 입력해 주세요")),
+        //     i = 1, //i = 2;
+        //     fac = 1;
+
+        // while (i <= n) {
+        //     fac *= i; // fac * 1 = 1, fac * 2 = 2, fac * 3 = 3 ...
+        //     i++;
+        // }
+        // document.write(fac);
+
+        // 변수 2개
+        var n, fac = 1;
+        n = Number(prompt("계산할 팩토리얼 값을 입력해 주세요"));
+
+        while(n > 1) {
+            fac *= n;
+            n --;
+        }
+        document.write(fac);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

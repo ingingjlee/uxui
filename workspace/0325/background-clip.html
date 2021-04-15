@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            padding: 50px;
+            border: 20px dashed black;
+            background-color: cornflowerblue;
+            /* 
+                특정영역만 배경 적용하기
+                background-clip: border-box, padding-box, content-box
+             */
+             background-clip: content-box;
+        }
+        .clip_text {
+            background-image: url(/0325/img/dog.jpg);
+            font-size: 32px;
+            font-weight: bold;
+            /* 
+                background-clip
+                    text : 배경 이미지와 중첩되는 부분만 출력
+                -webkit : 크롬 브라우저에서 적용하도록 지정
+             */
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <hr>
+    <div class="clip_text">
+        글자 투명화 테스트
+    </div>
+</body>
+</html>

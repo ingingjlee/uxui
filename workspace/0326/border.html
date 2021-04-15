@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>테두리</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            /* 
+                border
+                    두께, 종류, 색상 지정(상하좌우 동일한 디자인)
+                    solid, dashed, dotted, double, inset, outset
+                border-width, border-style, border-color 이용하여 각각의 값 제어 가능
+                border-left, border-top, border-right, border-bottom으로 각각 제어 가능
+                border-radius : border 모서리 곡면화, 곡면반지름값 px로 설정
+            */
+        }
+        .border1 {
+            border: 20px solid cornflowerblue;
+        }
+        .border2 {
+            border-left: 10px solid yellowgreen;
+        }
+        .border3 {
+            border: 5px solid blueviolet;
+            border-radius: 20px;
+        }
+        .border4 {
+            width: 300px;
+            height: 50px;
+            border: 1px solid crimson;
+            border-radius: 50px;
+        }
+        .border5 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid orchid;
+            border-radius: 150px;
+            background-color: plum;
+            box-shadow: 0 0 20px rgb(0, 174, 255);
+        }
+        .border6 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid coral;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 40px;
+            border-top-left-radius: 60px;
+            border-top-right-radius: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="border1"></div><hr>
+    <div class="border2"></div><hr>
+    <div class="border3"></div><hr>
+    <div class="border4"></div><hr>
+    <div class="border5"></div><hr>
+    <div class="border6"></div><hr>
+</body>
+</html>

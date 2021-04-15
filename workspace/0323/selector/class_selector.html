@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>class 선택자</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- 
+        class 선택자
+            미리 css로 디자인을 만든 후, 해당 디자인이 필요한 여러 종류 태그에게 디자인을 적용하는 방식
+            .(class) {  }
+     -->
+    <!-- 
+         ** id는 class 선택자보다 우선적용된다.(레벨이 더 높음)
+    -->
+    <style>
+        table {
+            border-collapse: collapse;
+            /* table 테두리 Cellspacing 제거 */
+        }
+
+        /* 그룹 선택자 */
+        th,
+        td {
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .under {
+            text-decoration: underline;
+        }
+
+        #blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            <tr>
+                <td>1</td>
+                <td class="under">외국인은 국제법과 조약이 정하는 바에 의하여 그 지위가 보장된다.</td>
+                <td class="red" id="blue">최충</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td class="under">모든 국민은 헌법과 법률이 정한 법관에 의하여 법률에 의한 재판을 받을 권리를 가진다.</td>
+                <td>이완용</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td class="red under">국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호한다.</td>
+                <td>성삼문</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>모든 국민은 소급입법에 의하여 참정권의 제한을 받거나 재산권을 박탈당하지 아니한다.</td>
+                <td>한석봉</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다.</td>
+                <td>성삼문</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>각급 선거관리위원회의 조직·직무범위 기타 필요한 사항은 법률로 정한다.</td>
+                <td>단군</td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>

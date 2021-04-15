@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>텍스트 정렬</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        /* 
+            text-align : 자식 요소의 inline 태그와 텍스트 정렬
+                left, center, right, justify(양쪽 정렬)
+         */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+        }
+        .center {
+            text-align: center;
+        }
+        .right {
+            text-align: right;
+        }
+        .left {
+            text-align: left;
+        }
+        .justify {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th class="left">제목</th>
+                <th>작성자</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td class="center">국회의원의 수는 법률로 정하되, 200인 이상으로 한다. 정기회의 회기는 100일을, 임시회의 회기는 30일을 초과할 수 없다.</td>
+                <td>황보항</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>국가의 세입·세출의 결산, 국가 및 법률이 정한 단체의 회계검사와 행정기관 및 공무원의 직무에 관한 감찰을 하기 위하여 대통령 소속하에 감사원을 둔다.</td>
+                <td>이개</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td class="right">감사원은 세입·세출의 결산을 매년 검사하여 대통령과 차년도국회에 그 결과를 보고하여야 한다.</td>
+                <td>김시습</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>모든 국민은 그 보호하는 자녀에게 적어도 초등교육과 법률이 정하는 교육을 받게 할 의무를 진다.</td>
+                <td>단군</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td class="justify">국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다.</td>
+                <td>이완용</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>trim 함수</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        var str1 = "hel      lo                 ";
+        var str2 = "                 hell        o";
+        var str3 = "       he     llo          ";
+
+        /* 
+            trim() : 문자열의 좌우 여백 삭제
+                ==> 문자열 사이에 있는 여백은 삭제 x
+        */
+        document.write(str1.length, " ", str1, "<br>");
+        str1 = str1.trim();
+        document.write(str1.length, " ", str1, "<br>");
+        document.write(str2.length, " ", str2, "<br>");
+        str2 = str2.trim();
+        document.write(str2.length, " ", str2, "<br>");
+        document.write(str3.length, " ", str3, "<br>");
+        str3 = str3.trim();
+        document.write(str3.length, " ", str3, "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

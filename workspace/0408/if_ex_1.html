@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>if문 응용 예제 01</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        // 1-100까지 출력하는 스크립트 작성
+        for (num = 1; num <= 100; num++) {
+            /* 
+                if 문을 이용해서 3과 5의 배수만 출력
+                단, 공배수는 한번만 출력(15, 30, ...)
+            */
+            if(num%3 == 0 || num%5 == 0) {
+                document.write(num, "<br>");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

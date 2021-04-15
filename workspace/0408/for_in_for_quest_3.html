@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>for in for 문제 03</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        var num = 1;
+        table = "<table>"
+        for (i = 0; i < 5; i++) {
+            table += "<tr>"
+            
+            // 앞쪽 빈칸
+            for (j = 0; j < 5 - i - 1; j++) {
+                table += "<td></td>";
+            }
+
+            // 숫자 셀
+            for (j = 0; j < 2 * i + 1; j++, num++) {
+                table +="<td>" + num + "</td>";
+            }
+
+            // 뒷쪽 빈칸
+            for (j = 0; j < 5 - i - 1; j++) {
+                table += "<td></td>";
+            }
+            
+            table += "</tr>";
+        }
+        document.write(table);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

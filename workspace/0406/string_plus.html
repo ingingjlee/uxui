@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>문자열 병합</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        // 정수 2개를 저장할 변수와 문자열 저장할 변수 1개 선언
+            var n1 = 100, n2 = 150, msg = "Hello World";
+
+            /* 
+                (문자열 + 정수)의 경우 ==> 정수를 문자열로 정의하여 문자열 + 문자열의 결과값 출력
+                    ex) 문자열 + 정수 + 정수 = 문자열"정수""정수"
+                        정수 + 정수 + 문자열 = "(정수 + 정수)"문자열
+            */
+            document.write(msg + n1, "<br>");
+            document.write(msg + n2, "<br>");
+            // 계산은 왼쪽에서부터 순차적으로 진행
+            document.write(msg + n1 + n2, "<br>");
+            document.write(msg + (n1 + n2));
+            document.write(n1 + n2 + msg, "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

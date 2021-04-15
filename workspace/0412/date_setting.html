@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>date(날짜/시간) 객체</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        var today = new Date("2021-04-12");
+        // .set : 데이터 삽입
+        today.setDate(31);    // 날짜 중 일자 변경
+        document.write(today, "<br>");
+        today.setDate(0);
+        document.write(today, "<br>");
+        today.setDate(-1);
+        document.write(today, "<br><hr>")
+
+        //today에 저장된 값을 기준으로 전날 날짜로 이동하는 코드 작성 1
+        today.setDate(today.getDate()-1);
+        document.write(today, "<br>");
+
+        //today에 저장된 값을 기준으로 전날 날짜로 이동하는 코드 작성 1
+        today.setTime(today.getTime()-(1000*60*60*24));
+        document.write(today, "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

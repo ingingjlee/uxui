@@ -1,0 +1,26 @@
+@charset 'utf-8';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.layout-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+img {
+    width: 400px;
+    padding: 0 20px 20px 0;
+    float: left;
+}
+
+p {
+    margin: 20px 0;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>font style</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        /* 
+            폰트 색상
+                color: ;
+                    rgb(0-255, 0-255, 0-255)
+                    #FFFFFF
+            기울임꼴
+                font-style: italic; // 기본값(normal)
+            밑줄
+                text-decoration: ;
+                    underline, overline, line-throw, none(하이퍼링크 언더라인 제거 등에 사용)
+                줄 색은 글꼴 색과 동일
+         */
+        .color {
+            color: #f01;
+         }
+
+         .italic {
+             font-style: italic;
+         }
+         .line {
+             text-decoration: line-through;
+         }
+        a {
+            text-decoration: none;
+        }
+        /* 
+            font 
+                가장 앞에 있는 폰트가 가장 우선순위, 서브폰트(사용자 컴퓨터에 메인 폰트가 없을 경우 적용, 3개정도 지정)
+                웹 폰트 : 인터넷 연결되어있는 환경 내에서 사용 가능, cdn방식
+                          단점) 최초 로드 시, 리소스 잡아먹어서 느려짐
+                ===> 사용할 폰트 다운로드 후 로컬서버에 등록해서 사용하는 방식이 더 효율적
+                ** 라이센스 체크 잘하기!
+        */
+        .bold {
+            font-weight: bold;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+        .font {
+            font-family: 'Nanum Pen Script', cursive;
+        }
+        @font-face {
+            font-family: 'bp'; /* 폰트 이름 지정 */
+            src: url('/0323/font/resource/SongMyung-Regular.ttf');    /* 지정 폰트 위치 */
+        }
+        .new_font {
+            font-family: 'bp', 'Nanum Pen Script';
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">하이퍼링크</a>
+    <p class="line">국민의 모든 자유와 권리는 국가안전보장·질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다.</p>
+
+    <p class="italic">국가는 균형있는 국민경제의 성장 및 안정과 적정한 소득의 분배를 유지하고, 시장의 지배와 경제력의 남용을 방지하며, 경제주체간의 조화를 통한 경제의 민주화를 위하여 경제에 관한 규제와 조정을 할 수
+        있다.</p>
+
+    <p class="bold">국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호한다.</p>
+
+    <p class="font">누구든지 체포 또는 구속을 당한 때에는 즉시 변호인의 조력을 받을 권리를 가진다. 다만, 형사피고인이 스스로 변호인을 구할 수 없을 때에는 법률이 정하는 바에 의하여 국가가 변호인을 붙인다.</p>
+
+    <p class="new_font">헌법재판소는 법관의 자격을 가진 9인의 재판관으로 구성하며, 재판관은 대통령이 임명한다.</p>
+</body>
+
+</html>

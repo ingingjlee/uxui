@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>transition 효과</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        /* 
+            transition : 재생이 완료되면 완료값으로 유지
+                transition-duration : 프레임값
+                transition-property : 트랜지션 적용요소 지정
+         */
+        a:link, a:visited {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            background-size: 80px;
+            background-image: url(/0401/img/youtube.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 1px solid black;
+            transition-duration: 1s;
+            /* transition-property: background-color; */
+        }
+
+        a:hover {
+            background-color: grey;
+            border-radius: 50px;
+            background-image: url(/0401/img/home.png);
+            background-size: 100px;
+        }
+
+        #box {
+            width: 150px;
+            height: 150px;
+            background-size: 100px;
+            background-image: url(/0401/img/youtube.png);
+            background-position: center;
+            background-repeat: no-repeat;
+
+            animation-name: ani2;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+
+        /* 
+            animation : 재생이 완료되면 초기값으로 돌아감
+                animation-name: 애니메이션명 지정
+                animation-duration: 애니메이션 프레임 지정
+                animation-iteration-count: 애니메이션 반복 횟수 지정 //infinite(loop)
+                animation-direction: alterante(초기값-지정값-초기값-지정값), alternate-reverse(지정값-초기값-지정값-초기값)
+            @keyframes 애니메이션명 {}
+         */
+        /* #box:hover {
+            animation-name: ani2;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        } */
+
+        @keyframes ani1 {
+            from {
+                background-image: url(/0401/img/youtube.png);
+            }
+            to {
+                background-image: url(/0401/img/home.png);
+            }
+        }
+
+        @keyframes ani2 {
+            0% {
+                margin-left: 0px;
+            }
+            50% {
+                margin-left: 885px;
+            }
+            100% {
+                margin-left: 1845px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#"></a>
+    <hr>
+    <div id="box"></div>
+</body>
+</html>

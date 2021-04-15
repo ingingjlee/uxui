@@ -1,0 +1,10 @@
+position
+    해당 요소를 고정하는 형태
+    fixed, absolute, relative, static
+        fixed: 월드좌표 기준
+        absolute & relative : 부모선택자 기준
+    top, left, right, bottom 값 지정하여 배치
+
+z-index
+    레이어 개념, 값이 높을수록 앞에 출력, 낮을수록 뒤에 출력
+    ** position: static 일 경우, 적용X

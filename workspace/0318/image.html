@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>이미지 태그</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <!-- src : 이미지 파일 경로, alt : 엑박일때 뜨는 글자 내용 -->
+    <!-- src : 상대경로, 절대경로, 웹주소(url) -->
+
+    <!-- 상대경로 일때 : 현재 html 파일을 기준으로 해당 이미지까지의 경로 -->
+    <img src="img/sea1.jpg" alt="" width="300" height="">      <!-- 옵션값 width, height : 값 직접 지정, 둘중 한 값만 넣을 경우 나머지 값은 앞의 지정값 배율과 동일하게 적용 -->
+    <img src="img/sub/sea3.jpg" alt="">
+    <img src="sea2.jpg" alt="">     <!-- 같은 폴더에 있을때는 파일명만 설정 -->
+    <img src="../jellyfish.jpg" alt="">      <!-- .. : 상위폴더로 이동 -->
+    <!-- url -->
+    <img src="https://cdn.pixabay.com/photo/2013/12/17/20/10/bubbles-230014_960_720.jpg" alt="">
+    <img src="/0318/img/sub/sea3.jpg" alt="">       <!-- ** URL root 폴더 기준으로 경로 잡음// 가장 많이 사용하는 방법 ** -->
+    <!-- 절대경로 일때 : 실제 컴퓨터에서 파일이 있는 위치 기준, 보안상의 이유로 사용하지않는 추세. -->
+    <img src="file:///c:/workspace/0318/sea2.jpg" alt="절대 경로로 잡은 이미지">
+    <br><hr><br>
+    
+</body>
+</html>

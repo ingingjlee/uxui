@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title></title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        // 팝업창에 나타낼 메시지, 미리 입력할 값
+        var input = prompt("숫자 입력하세요", "0");
+        input = Number(input);   // 입력값 숫자로 인식하게 하기 --> 계산용도로 변경할때 이용
+        document.write(typeof input, "<br>");   // 웹에서 입력되는 데이터는 모두 "string"으로 인식
+        document.write(input, " ", input + 100, "<br>");
+        /* 
+            null : 데이터가 없음
+            "" : 빈 문자열 --> 회원가입 시 공백 체크
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

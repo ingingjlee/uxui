@@ -1,0 +1,201 @@
+@charset 'utf-8';
+
+* { margin: 0; padding: 0; }
+
+.layout-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+/* HEADER CSS */
+header {
+    width: 100%;
+}
+
+header nav {
+    width: 100%;
+    display: inline-block;
+    clear: both;
+    padding: 20px 0;
+}
+
+header nav ul {
+    float: right;
+    margin-right: 30px;
+    list-style-type: none;
+    display: inline-block;
+}
+
+header nav ul li {
+    float: left;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 20px 0;
+    line-height: 40px;
+}
+
+header nav ul li a img {
+    height: 20px;
+    padding: 8px 0;
+    margin: 0 16px;
+}
+
+header nav ul li button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #4d82e6;
+}
+
+header nav ul li button:hover {
+    background-color: #6b99f0;
+    box-shadow: 1px 1px 5px #afafaf;
+}
+
+/* SECTION CSS */
+section {
+    width: 100%;
+}
+
+/* section - logo */
+.logo {
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    clear: both;
+}
+.logo a img {
+    width: 360px;
+}
+
+/* section - search */
+.search {
+    width: 100%;
+}
+section .search form {
+    max-width: 60%;
+    height: 50px;
+    margin: 0 auto;
+    border: 1px solid #d9d9d9;
+    border-radius: 25px;
+    clear: both;
+}
+
+.search input {
+    min-width: 40%;
+    margin-left: 16px;
+    padding: 4px 20px;
+    padding-left: 30px;
+    border: none;
+    background-image: url(/0330/img/search.png);
+    background-repeat: no-repeat;
+    background-size: 22px;
+    float: left;
+    position: relative;
+    top: 15px;
+    outline: none;
+}
+
+.search .control {
+    float: right;
+    position: relative;
+    top: 12px;
+    right: 12px;
+}
+
+.search a {
+    margin-left: 2px;
+}
+
+.search a:first-of-type {
+    opacity: 0.6;
+}
+
+.search a img {
+    height: 24px;
+}
+
+/* section - search_btn */
+.search_btn {
+    width: 100%;
+    height: 200px;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.search_btn button {
+    margin: 0 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid rgba(0,0,0,0);
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    color: #2a2a2a;
+}
+
+.search_btn button:hover {
+    border: 1px solid #d9d9d9;
+    box-shadow: 1px 1px 4px #f1f1f1;
+}
+
+/* FOOTER CSS */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #e9e9e9;
+    color: #7e7e7e;
+}
+
+footer .contury {
+    border-bottom: 1px solid #d4d4d4;
+}
+
+footer .contury p {
+    padding: 20px 30px;
+}
+
+footer .info {
+    width: 100%;
+}
+
+footer .info .info_wrapper {
+    margin: 0 auto;
+    text-align: center;
+    clear: both;
+    font-size: 14px;
+}
+
+footer .info ul {
+    list-style-type: none;
+    padding: 10px 20px 20px 20px;
+}
+
+footer .info .footer_1 {
+    float: left;
+}
+
+footer .info .footer_2 {
+    float: right;
+}
+
+footer .info ul li {
+    float: left;
+    margin: 10px 10px 0 10px;
+}
+
+footer .info ul li a {
+    text-decoration: none;
+}
+
+footer .info ul li a:visited {
+    color: #7e7e7e;
+}

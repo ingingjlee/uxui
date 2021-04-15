@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        #back {
+            width: 100px;
+            height: 100px;
+            background-image: url(/jellyfish.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pop">영역 태그</div>
+    <ul>
+        <li>A - list</li>
+        <li>B - list</li>
+        <li>C - list</li>
+        <li>D - list</li>
+        <li>E - list</li>
+    </ul>
+
+    <div id="back" onmouseover="rolloverImage()"></div>
+
+    <script>
+        var pop = document.getElementById("pop");
+        // alert(pop.innerHTML);
+        /* 
+            선택된 태그에 css 적용하는 방법
+                --> "변수이름".style.속성명 = 속성값;
+
+                css 속성이 background-color와 같이 -가 들어가있는 경우, - 빼고 단어를 붙이고 2번째 단어부터 첫글자를 대문자로 기입
+                    ex) backgroundColor, listStyleType ...
+         */
+        pop.style.color = "#e8e8e8";
+        pop.style.backgroundColor = "yellow";
+
+        // 태그명으로 선택할때는 반드시 배열로 선택해주어야 함
+        var ul = document.getElementsByTagName("ul")[0];
+        ul.style.listStyleType = "none";
+
+        function rolloverImage () {
+            var back = document.getElementById("back");
+            back.style.backgroundImage = "url('/coffee1.jpg')";
+        }
+
+
+    </script>
+</body>
+
+</html>

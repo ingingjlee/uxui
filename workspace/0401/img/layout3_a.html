@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>레이아웃</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box;}
+        /* body::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+            스크롤바 너비
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: cyan;
+            스크롤바 내의 뷰위치바
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: red;
+            border-radius: 5px;
+            스크롤바 내의 백그라운드바
+        } */
+
+        /* 좌측 세로 메뉴 css */
+        .left_menu {
+            width: 60px;
+            height: 1040px;
+            background-color: grey;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        .left_menu li {
+            width: 100%;
+            height: 40px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .left_menu img {
+            width: 40px;
+            transition-duration: 0.5s;
+            transition-property: all;
+        }
+
+        .left_menu img:hover {
+            width: 50px;
+        }
+
+        header {
+            width: 1860px;
+            height: 500px;
+            margin-left: 60px;
+            background-image: url(/0401/img/coffee1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .main_menu {
+            width: 1860px;
+            height: 60px;
+            margin-left: 60px;
+            text-align: center;
+        }
+
+        .main_menu ul {
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        .main_menu li {
+            width: 220px;
+            height: 50px;
+            float: left;
+        }
+
+        .main_menu li a:link, .main_menu li a:visited {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 24px;
+            padding: 13px 0;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+        }
+
+        section {
+            width: 1860px;
+            height: 500px;
+            margin-left: 60px;
+        }
+
+        .product_info {
+            background-image: url(/0401/img/coffee2.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .product_info_detail{
+            width: 500px;
+            background-color: #ff000067;
+            color:white;
+            top : 100px;
+            left: 200px;
+            position: relative;
+            padding:30px;
+            /* opacity: 0.5; */
+        }
+        .product_info_detail > p{
+            font-size: 20px;
+        }
+        .cf_section{
+            text-align: center;
+            padding-top:98px;
+            background-color: cornsilk;
+            
+        }
+        .print_section{
+            text-align: center;
+        }
+        .print_section > article > h2{
+            font-size: 42px;
+            padding:70px 0px;
+        }
+        .print_section img{
+            width:400px;
+            height: 600px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+        <nav class="left_menu">
+            <ul>
+                <li><a href="#"><img src="/0401/img/home.png" alt="메인페이지 이동 아이콘"></a></li>
+                <li><a href="#"><img src="/0401/img/coffee.png" alt="제품소개 페이지 이동 아이콘"></a></li>
+                <li><a href="#"><img src="/0401/img/image.png" alt="갤러리 페이지 이동 아이콘"></a></li>
+                <li><a href="#"><img src="/0401/img/video.png" alt="광고 페이지 이동 아이콘"></a></li>
+                <li><a href="#"><img src="/0401/img/headphone.png" alt="고객센터 페이지 이동 아이콘"></a></li>
+            </ul>
+        </nav>
+        <header></header>
+        <nav class="main_menu">
+            <ul>
+                <li><a href="#" title="메인페이지 이동">HOME</a></li>
+                <li><a href="#" title="COFFEE페이지 이동">COFFEE</a></li>
+                <li><a href="#" title="CF 동영상 페이지 이동">CF</a></li>
+                <li><a href="#" title="PRINT 페이지 이동">PRINT</a></li>
+                <li><a href="#" title="문의 페이지 이동">문의하기</a></li>
+            </ul>
+        </nav>
+        <section class="product_info">
+            <article class="product_info_detail">
+                <h2>얼마나 아름다우냐?</h2>
+                <p>
+                    대한민국의 영토는 한반도와 그 부속도서로 한다. 형사피해자는 법률이 정하는 바에 의하여 당해 사건의 재판절차에서 진술할 수 있다. 행정권은 대통령을 수반으로 하는 정부에 속한다.
+                </p>
+            </article>
+        </section>
+        <section class="cf_section">
+            <iframe width="1500" height="843" src="https://www.youtube.com/embed/RStKpi1w6eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <section class="print_section">
+            <article>
+                <h2>PRINT</h2>
+                <a href="#" title="월페이퍼 원본이미지 페이지로 이동"><img src="/0401/img/content_img.jpg" alt=""></a>
+                <a href="#" title="월페이퍼 원본이미지 페이지로 이동"><img src="/0401/img/content_img.jpg" alt=""></a>
+                <a href="#" title="월페이퍼 원본이미지 페이지로 이동"><img src="/0401/img/content_img.jpg" alt=""></a>
+            </article>
+        </section>
+        <section></section>
+</body>
+</html>

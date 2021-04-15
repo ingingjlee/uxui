@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>if문 문제 01</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .bg_yellow {
+            background-color: yellow;
+        }
+
+        .bg_green {
+            background-color: greenyellow;
+        }
+    </style>
+    <script>
+        // var num = 1,
+        //     table = "<table>";
+        // for (i = 0; i < 5; i++) {
+        //     table += "<tr>";
+        //     for (j = 0; j < 5; j++, num++) {
+        //         if(i%2 == 0) {
+        //             table += "<td class='bg_green'>" + num + "</td>"
+        //         } else {
+        //             table += "<td class='bg_yellow'>" + num + "</td>"
+        //         }
+        //     }
+        //     table += "</tr>";
+        // }
+        // table += "</table>"
+        // document.write(table);
+
+        var num = 1,
+            table = "<table>";
+        for(i=1; i<=5; i++) {
+            if (i%2==0) {
+                table += "<tr class='bg_yellow'>";
+            } else {
+                table += "<tr class='bg_green'>";
+            }
+            for (j=0; j<5; j++, num++) {
+                table += "<td>" + num + "</td>";
+            }
+            table += "</tr>"
+        }
+
+        table += "</table>"
+        document.write(table);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+/* general css */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* h1 css */
+h1 {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* container css */
+.container {
+    width: 600px;
+    padding: 50px;
+    margin: 0 auto;
+    border: 1px solid #e5e5e5;
+}
+
+/* form css */
+.container > form > ul {
+    list-style-type: none;
+}
+
+.container > form > ul > li {
+    margin: 10px 0;
+}
+
+.container > form > ul > ul {
+    padding-left: 30px;
+    list-style-type: disc;
+    font-size: 12px;
+    color: grey;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    border: none;
+    outline: none;
+    height: 50px;
+    font-size: 20px;
+    width: 75%;
+}
+
+.sub_txt {
+    width: 25%;
+    font-size: 20px;
+    font-weight: bold;
+    color: grey;
+    text-align: right;
+    display: inline-block;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.border_bottom {
+    border-bottom: 2px solid #bbb;
+}
+.border_left {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 2px solid #bbb;
+}
+
+select {
+    border: none;
+    width: 15%;
+    height: 50px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.btn_send_no {
+    background-color: white;
+    width: 300px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid #e8e8e8;
+}
+
+.btn_send_no:hover {
+    background-color: #e8e8e8;
+    border: 1px solid #bababa;
+}
+
+.btn_submit {
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 10px;
+}

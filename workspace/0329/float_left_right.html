@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>float/clear</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #727272;
+        }
+        .box_1 {
+            background-color: #ffa798;
+        }
+        .box_2 {
+            background-color: #cae495;
+        }
+        .box_3 {
+            background-color: #a3bff1;
+            width: 1000px;
+            height: 200px;
+        }
+        .left { float: left; }
+        .right { float: right; }
+        /* 
+            clear
+                left : float-left 무력화
+                right : float-right 무력화
+                both : left&right 무력화
+         */
+        .clear {
+            clear: both;
+        }
+        .container {
+            width: 1200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box_1 left"></div>
+        <div class="box_2 right"></div>
+    </div>
+    <div class="box_3 clear"></div>
+</body>
+</html>

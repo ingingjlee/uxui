@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>카카오계정</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" method="post">
+            <h2>카카오계정 정보를 입력해 주세요</h2>
+            <div class="id">
+                <label for="id">카카오계정 이메일</label>
+                <input type="text" name="id" id="id" placeholder="아이디 입력"><span>@kakao.com</span>
+                <ul>
+                    <li>입력한 카카오메일로 카카오계정에 로그인 할 수 있습니다.</li>
+                    <li>한번 만든 카카오메일은 변경할 수 없으니, 오타가 없도록 신중히 확인해주세요.</li>
+                    <li>생성한 카카오메일로 카카오계정과 관련한 알림을 받아볼 수 있습니다.</li>
+                </ul>
+            </div>
+            <div class="password">
+                <label for="password">비밀번호</label>
+                <input type="password" name="password" id="password" placeholder="비밀번호(8~32자리)" minlength="8" maxlength="32">
+                <input type="password" name="password" placeholder="비밀번호 재입력" minlength="8" maxlength="32">
+            </div>
+            <div class="nick_name">
+                <label for="nick">닉네임</label>
+                <input type="text" name="nick" id="nick" placeholder="닉네임을 입력하세요"><span>0/20</span>
+            </div>
+            <div class="tel">
+                <label for="tel">전화번호</label>
+                <div>
+                    <select name="gcode" id="gcode">
+                        <option value="82" selected>+82</option>
+                        <option value="1">+1</option>
+                        <option value="84">+84</option>
+                        <option value="55">+55</option>
+                    </select>
+                    <input type="text" name="tel" id="tel" placeholder="전화번호">
+                </div>
+            </div>
+            <button type="button">인증번호 전송</button>
+            <button type="submit">다음</button>
+        </form>
+    </div>
+</body>
+
+</html>

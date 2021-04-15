@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form 태그</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <form action="" method="GET">
+        가입 약관 동의 여부 :
+        <!-- 
+            radio button은 여러개 중 하나의 항목만 선택할때 쓰임
+            name 속성값을 동일하게 설정해서 radion button을 그룹 묶어야 하나만 선택 가능 
+        -->
+        <input type="radio" name="agree" value="yes">예
+        <input type="radio" name="agree" value="no">아니오<br>
+        날짜 : <input type="date" name="date"><br>
+        <!-- 
+            type = "number"
+                min : 최소값
+                max : 최대값
+                step : 카운트시 증감값, default = 1
+         -->
+        수량 : <input type="number" name="" id="" min="0" max="20" step="1"><br>
+        첨부파일 : <input type="file" name="" id=""><br>
+        <!-- 
+            type = "range"
+                value : 1~100
+         -->
+        슬라이더 : <input type="range" name="" id="" value="0"><br>
+        color picker : <input type="color" name="color" id="" value="#fff"><br>
+        <!-- 
+            select에서 전송되는 값 : option의 value 속성
+            selected 속성 이용해서 기본적으로 선택할 항목을 지정
+         -->
+        <select name="sel1">
+            <option value="F">---선택---</option>
+            <option value="A">선택1</option>
+            <option value="B" selected>선택2</option>
+            <option value="C">선택3</option>
+            <option value="D">선택4</option>
+        </select><br>
+        <!-- 
+            <textarea></textarea> 
+            : input 태그의 텍스트 상자에서 쓰던 속성을 전부 사용이 가능 
+              ** 태그 안에 내용 넣지 않기(내용 작성 시 해당값 미리 입력되어 있음, 띄어쓰기&줄바꿈 모두 적용됨)
+                cols : 가로길이(글자 수)
+                rows : 세로길이(라인 수)
+        -->
+        <textarea name="" id="" cols="30" rows="10" placeholder="텍스트 입력"></textarea>
+        <!-- 
+            <button></button>
+                type default값 : submit
+                html5 넘어오면서 생긴 태그
+        -->
+        <br>
+        <button type="submit">전송</button>     <!-- === <input type="submit"> -->
+        <button type=""></button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>coffee page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<body>
+    <nav class="left_menu">
+        <ul>
+            <li><a href="#home" title="home"></a></li>
+            <li><a href="#coffee" title="coffee"></a></li>
+            <li><a href="#cf" title="cf"></a></li>
+            <li><a href="#print" title="print"></a></li>
+            <li><a href="#contact" title="문의하기"></a></li>
+        </ul>
+    </nav>
+    <header id="home"></header>
+    <nav class="main_menu">
+        <ul>
+            <li><a href="#home" title="home">HOME</a></li>
+            <li><a href="#coffee" title="coffee">COFFEE</a></li>
+            <li><a href="#cf" title="cf">CF</a></li>
+            <li><a href="#print" title="print">PRINT</a></li>
+            <li><a href="#contact" title="문의하기">문의하기</a></li>
+        </ul>
+    </nav>
+    <section id="contact">
+        <article>
+            <form action="" method="GET">
+                <h2>제품 문의하기</h2>
+                <ul>
+                    <li>
+                        <label for="title">제목</label>
+                        <!-- <h3>제목</h3> -->
+                        <input type="text" name="title" id="title" placeholder="제목을 입력해주세요" required>
+                    </li>
+                    <li>
+                        <label for="writer">작성자</label>
+                        <!-- <h3>작성자</h3> -->
+                        <input type="text" name="writer" id="writer" placeholder="작성하신분 성함을 입력해주세요" required>
+                    </li>
+                    <li class="adress">
+                        <label for="email_id">답변받을 이메일</label>
+                        <!-- <h3>답변받을 이메일</h3> -->
+                        <input type="text" name="email" id="email_id" placeholder="이메일 주소" required>
+                        <span>@</span>
+                        <select name="place" id="place">
+                            <option value="gmail" selected>gmail.com</option>
+                            <option value="naver">naver.com</option>
+                            <option value="daum">hanmail.net</option>
+                            <option value="write">직접입력</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="text">문의내용</label>
+                        <!-- <h3>문의내용</h3> -->
+                        <textarea name="text" id="text" cols="80" rows="20" placeholder="문의 내용을 입력해주세요" required></textarea>
+                    </li>
+                    <li>
+                        <button type="submit">문의하기</button>
+                        <button type="reset">초기화</button>
+                    </li>
+                </ul>
+            </form>
+        </article>
+    </section>
+    <footer></footer>
+</body>
+</html>

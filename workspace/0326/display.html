@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>display 속성</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        /* 
+            display 속성
+                inline, block 등 다른 형태로 변경을 할때 사용하는 css
+                inline, block, inline-block, none
+         */
+
+         /* a {
+             width: 100px;
+             height: 50px;
+             border: 1px solid black;
+             padding: 40px;
+             display: inline-block;
+         } */
+
+         .img1 {
+             display: none;     /* 영역 전체 제거 */
+         }
+         .img2 {
+             visibility: hidden;    /* 출력만 안할뿐 영역은 유지 */
+         }
+         ul {
+             list-style-type: none;
+             font-size: 0;
+         }
+         li {
+             width: 100px;
+             height: 50px;
+             border: 1px solid black;
+             display: inline-block;
+             text-align: center;
+         }
+
+         .menu_a {
+            width: 100%;
+            font-size: 16px;
+            line-height: 16px;
+            padding: 17px 0;    /* 전체height값 - line-height / 2 = 중앙배열*/
+            color: black;
+            text-decoration: none;
+            display: inline-block;
+            box-sizing: border-box;
+         }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#" class="menu_a">항목1</a></li>
+        <li><a href="#" class="menu_a">항목2</a></li>
+        <li><a href="#" class="menu_a">항목3</a></li>
+        <li><a href="#" class="menu_a">항목4</a></li>
+        <li><a href="#" class="menu_a">항목5</a></li>
+    </ul>
+    <hr>
+    <a href="#">버튼</a>
+    <a href="#">버튼</a>
+    <a href="#">버튼</a>
+    <a href="#">버튼</a>
+    <hr>
+    <h2>display: none vs visibility: hidden</h2>
+    <img src="/0325/img/dog.jpg" alt="" class="img1">
+    <img src="/0325/img/dog.jpg" alt="" class="img2">
+</body>
+</html>

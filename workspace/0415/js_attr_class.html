@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>attr - class</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        .bgcolor { background-color: yellow; }
+
+        .border {
+            border: 10px solid black;
+        }
+
+        .box1 {
+            background-color: blue;
+        }
+
+        .box2 {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1" onmouseover="changeBackground()" onclick="removeBorder()"></div>
+    <script>
+        function changeBackground() {
+            /* 
+                1. 박스 선택
+                2. 현재 선택된 박스의 배경색 값 읽어오기
+                3. 마우스 오버시 배경색 바꾸기
+
+                box.style --> 태그에 직접선언한 style값 읽어옴
+            */
+            var box = document.getElementsByClassName("box1")[0];
+            // console.log(box[0].className);
+
+            box.className = "box2";
+            // console.log(box[0].className);
+            box.className += " border";
+
+            // var box = document.getElementsByTagName("div")[0];
+            // box.className = "box2";
+        }
+
+        /* 
+            1. 박스 선택
+            2. 현재 선택된 박스 클릭시 class 'border' 삭제
+        */
+        function removeBorder() {
+            var box = document.getElementsByTagName("div")[0];
+            // alert(box.className);
+            // box.className = box.className.replace("border", "");
+            // box.className = box.className.trim();   // className.trim() : 문자열 내 여백 삭제 --> 2개 이상의 class명이 남아있을 경우 에러날 수 있음
+            // alert(box.className.length);
+
+            /* 
+                box2 border bgcolor
+                1. 클래스 속성값을 공백으로 쪼개서 배열로 만들기
+                2. border에 해당하는 배열 요소 삭제
+                3. 배열에 있는 모든 요소를 공백으로 구분하여 하나의 문자열로 만든 후 클래스 속성값에 저장
+            */
+            var arr = box.className.split(" ");
+            arr = arr.splice(arr.indexOf("border"), 1);
+            box.className = arr.join(" ");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>달력</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            width: 150px;
+            height: 80px;
+            padding: 5px;
+        }
+
+        td {
+            vertical-align: top;
+            text-align: left;
+        }
+
+        td:first-child,
+        th:first-child {
+            color: red;
+        }
+
+        td:last-child,
+        th:last-child {
+            color: blue;
+        }
+
+        .disable {
+            color: #7f7f7f;
+        }
+    </style>
+    <script>
+        // 2021년도 4월달 달력
+        var today = new Date("2021-04-12");
+        var tag = "<h2>" + (today.getMonth() + 1) + "월 달력</h2>";
+        tag += "<table><tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr>";
+
+        // ----- 달력 구성 -----
+
+        //현재 월 정보 저장
+        var month = today.getMonth();
+
+        // 시작,종료 날짜 찾기
+        var start = new Date();
+        // 시간값 초기화
+        start.setHours(0);
+        start.setMinutes(0);
+        start.setSeconds(0);
+
+        // 이번달 시작 날짜
+        start.setDate(1);
+        var end = new Date();
+        end.setHours(0);
+        end.setMinutes(0);
+        end.setSeconds(0);
+
+        // 다음 달 변경
+        end.setMonth(end.getMonth() + 1);
+
+        // 이전 달 마지막날
+        end.setDate(0);
+        console.log(start, end);
+
+        // 달력 첫칸 날짜
+        start.setDate(start.getDate() - start.getDay());
+        // 달력 마지막칸 날짜
+        end.setDate(end.getDate() + 6 - end.getDay());
+        console.log("달력 첫칸 날짜 : " + start, "달력 마지막칸 날짜 : " + end);
+
+        // 달력 줄수 계산
+        var line = (end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24 * 7);
+        console.log("달력 줄수 : ", line);
+
+        //주차별로 완성
+        for (j = 0; j < line; j++) {
+            tag += "<tr>";
+            for (i = 0; i < 7; i++) {
+                if (month != start.getMonth()) {
+                    tag += "<td class='disable>" + start.getDate() + "</td>";
+                } else {
+                    tag += "<td>" + start.getDate() + "</td>";
+                }
+                start.setDate(start.getDate() + 1);
+            }
+            tag += "</tr>";
+        }
+
+        //출력
+        tag += "</table>";
+        document.write(tag);
+    </script>
+</head>
+
+<body></body>
+
+</html>

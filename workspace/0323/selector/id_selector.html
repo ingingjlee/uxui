@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>id 선택자</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- 
+        id 선택자 
+            #(id) { }
+            속성값의 특징 : 현재 페이지 내에서 다른 태그와 구분하기 위해 유일한 속성값을 지님
+         ** id는 class 선택자보다 우선적용된다.(레벨이 더 높음)
+      -->
+    <style>
+        li {
+            color: #10a510;
+        }
+        #under {
+            text-decoration: underline;   /* text-decoration : 위, 아래, 중간, 없음 */
+            color: black;
+        }
+        #italic {
+            font-style: italic;
+            color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>모든 국민은 능력에 따라 균등하게 교육을 받을 권리를 가진다.</li>
+        <li id="under">연소자의 근로는 특별한 보호를 받는다. 대한민국의 국민이 되는 요건은 법률로 정한다.</li>
+        <li>대통령은 헌법과 법률이 정하는 바에 의하여 국군을 통수한다.</li>
+        <li>사법권은 법관으로 구성된 법원에 속한다. 감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으로 하며, 1차에 한하여 중임할 수 있다.</li>
+        <li>헌법개정안이 제2항의 찬성을 얻은 때에는 헌법개정은 확정되며, 대통령은 즉시 이를 공포하여야 한다.</li>
+
+    </ul>
+    <ol>
+        <li>모든 국민은 인간으로서의 존엄과 가치를 가지며, 행복을 추구할 권리를 가진다. 국가는 개인이 가지는 불가침의 기본적 인권을 확인하고 이를 보장할 의무를 진다.</li>
+        <li>국채를 모집하거나 예산외에 국가의 부담이 될 계약을 체결하려 할 때에는 정부는 미리 국회의 의결을 얻어야 한다.</li>
+        <li id="italic">국무총리·국무위원 또는 정부위원은 국회나 그 위원회에 출석하여 국정처리상황을 보고하거나 의견을 진술하고 질문에 응답할 수 있다.</li>
+        <li>한 회계연도를 넘어 계속하여 지출할 필요가 있을 때에는 정부는 연한을 정하여 계속비로서 국회의 의결을 얻어야 한다.</li>
+        <li>국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호한다.</li>
+
+    </ol>
+</body>
+
+</html>

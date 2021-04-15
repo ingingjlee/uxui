@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>menu 예제</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body { 
+            text-align: center;
+            }
+
+        ul {
+            display: inline-block;
+            margin: 0 auto;
+            padding: 0 20px;
+            border-radius: 10px;
+            background-color: #f2f2f2;
+            list-style-type: none;
+        }
+
+        li {
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            line-height: 16px;
+            color: black;
+            padding: 10px;
+        }
+        .bar {
+            color: rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li class="bar">|</li>
+        <li><a href="#">회사소개</a></li>
+        <li class="bar">|</li>
+        <li><a href="#">브로슈어</a></li>
+        <li class="bar">|</li>
+        <li><a href="#">QnA</a></li>
+        <li class="bar">|</li>
+        <li><a href="#">오시는길</a></li>
+    </ul>
+</body>
+</html>

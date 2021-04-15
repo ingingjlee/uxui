@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>for in for 문제 02</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        var num = 1; // table에 나타낼 숫자
+        var table = "<table>"
+        for (i = 0; i < 5; i++) {
+            table += "<tr>";
+
+            // 빈 셀을 만드는 반복문
+            for (j = 0; j < 5 - i - 1; j++) {
+                table += "<td></td>";
+            }
+            // 숫자가 들어간 셀을 만드는 반복문
+            for(j = 0; j <= i ; j++, num++) {
+                table += "<td>" + num + "</td>";
+            }
+            table += "</tr>";
+        }
+        table += "</table>"
+
+        document.write(table);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

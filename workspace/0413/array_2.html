@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>array(배열) 예제 02</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        // 배열 생성
+        var arr = new Array();
+        var arr = [];
+
+        arr.push(1);
+        arr.push(4);
+        arr.push(5);
+        arr.push(2);
+        arr.push(3);
+
+        // 배열 내용 전체 출력
+        // for(i=0; i<arr.length; i++) {
+        //     document.write(arr[i], "<br>");
+        // }
+        // document.write("<hr>");
+
+        PrintArray(arr);
+        function PrintArray(arr) {
+            for(i=0; i<arr.length; i++) {
+                document.write(arr[i], " ")
+            }
+        }
+        document.write("<hr>");
+
+        document.write("<h2>배열 요소 검색</h2>");
+        //indexOf(검색할 값) --> 해당값이 위치한 인덱스 번호 리턴
+        document.write("값 5에 해당하는 인덱스 번호 : ", arr.indexOf(5), "<br>");
+        document.write("값 3에 해당하는 인덱스 번호 : ", arr.indexOf(3), "<br>");
+
+        document.write("<h2>배열 요소 삭제</h2>");
+        document.write(arr.splice(arr.indexOf(5), 1), " : 추출한 배열 <br>");   // 출력값 안에 splice사용하면 추출한 값이 무엇인지 출력해줌 
+        PrintArray(arr);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

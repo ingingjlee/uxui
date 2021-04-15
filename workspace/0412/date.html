@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>객체(object) - 1.날짜</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        /* 
+            오늘 날짜 정보를 획득
+            객체 생성(메모리를 할당하겠다.)
+        */
+       var today = new Date();
+       document.write(today, "<br>");
+       document.write("년도 : ", today.getFullYear(), "<br>");
+       document.write("월 : ", today.getMonth()+1, "<br>");    // 월의 경우, 0부터 시작 ==> +1 해줘야됨
+       document.write("일 : ", today.getDate(), "<br>");    // 일의 경우 1부터 시작
+       document.write("요일 : ", today.getDay(), "<br><hr>");    // 일 월 화 수 목 금 토 순으로 진행, 일요일 = 0
+
+       var yesterday = new Date(2021,3,11);
+       document.write(yesterday, "<br>");
+       document.write("년도 : ", yesterday.getFullYear(), "<br>");
+       document.write("월 : ", yesterday.getMonth()+1, "<br>");
+       document.write("일 : ", yesterday.getDate(), "<br>");
+       document.write("요일 : ", yesterday.getDay(), "<br><hr>")
+
+
+       /* 
+            일단위 변환(1day) = 1000(ms)*60(s)*60(m)*24(h)
+       */
+       today = new Date(2021, 3, 12);
+       document.write(today.getTime(), "<br>");
+       document.write(yesterday.getTime(), "<br>");
+       document.write(today - yesterday, "<br>");
+       document.write((today - yesterday)/(1000*60*60*24));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
