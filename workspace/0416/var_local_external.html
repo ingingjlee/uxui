@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>전역변수 & 지역변수</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        /* 
+            전역변수 : 전체 영역 내에서 사용 가능
+                       어떤 함수에서도 쓸 수 있는 변수
+                       --> 함수 밖에 선언해서 사용하는 변수 ==> 각 함수에서 동일한 변수를 쓸 수 있음
+                       모든 함수들이 값을 공유할 수 있기 때문에 전체영역에서 사용하는 경우를 제외하고 선언 X, 최소화 할것 ==> 스파게티 코드 우려
+            지역변수 : 해당 영역 내에서만 사용가능
+
+            id는 고유값이기 때문에 별도의 변수선언을 하지않아도 값을 잡아줌
+        */
+        window.onload = function() {
+            var n = 0, btn = document.getElementsByTagName("button")[0];
+            t = document.getElementById("num");     // 전역변수
+
+            btn.onclick = function() {
+                // var txt = document.getElementById("num");   // 지역변수
+                // n++;
+                // txt.value = n;
+                n++;
+                t.value = n;
+            }
+            console.log(txt.value);     // btn.onclick 이벤트 함수 안에서 선언한 변수(지역변수)이기 때문에 함수가 끝나면 자동적으로 메모리에서 해제 & 외부에서 접근 불가
+        }
+
+        function btnClick() {
+            t.value = Number(t.value)-1;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="num" value="0">
+    <button>증가</button>
+    <button onclick="btnClick()">감소</button>
+</body>
+</html>
