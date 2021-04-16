@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            width: 800px;
+            margin: 30px auto;
+            text-align: center;
+            font-size: 0;   /* 윗단의 ul과 아랫단의 div(ul) 사이의 공백(line-height, font-size)으로 인해 생기는 영역 없애기 위해 적용 */
+            /* border: 1px solid red; */
+        }
+
+        #main_menu {
+            list-style-type: none;
+            font-size: 0px;
+            display: inline-block;
+        }
+
+        #main_menu li {
+            width: 200px;
+            box-sizing: border-box;
+            float: left;
+            /* border: 1px solid black; */
+        }
+
+        #main_menu a:link,
+        #main_menu a:visited {
+            font-size: 16px;
+            width: 100%;
+            padding: 20px 0px;
+            display: inline-block;
+            box-sizing: border-box;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* sub_menu css */
+        div#sub_menu_container {
+            clear: both;
+            display: inline-block;
+            height: 0;
+            overflow: hidden;
+        }
+
+        ul.sub_menu {
+            width: 200px;
+            float: left;
+            box-sizing: border-box;
+            list-style: none;
+            /* display: inline-block; */
+        }
+
+        ul.sub_menu li a:link,
+        ul.sub_menu li a:visited {
+            width: 100%;
+            padding: 20px 0;
+            display: inline-block;
+            box-sizing: border-box;
+            color: blueviolet;
+            font-size: 14px;
+            text-decoration: none;
+            /* border: 1px solid black; */
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            // onmouseenter, onmouseleave --> nav에 적용해서 sub_menu 보이거나 숨김 처리
+            var nav = document.getElementsByTagName("nav")[0], sub = document.getElementById("sub_menu_container");
+            
+            nav.onmouseover = function() {
+                sub.style.height = "auto";
+            }
+            nav.onmouseleave = function() {
+                sub.style.height = "0";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!--가로로 메뉴바 작성-->
+    <nav>
+        <ul id="main_menu">
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+        </ul>
+        <div id="sub_menu_container">
+            <ul class="sub_menu">
+                <li><a href="#">메뉴 1-1</a></li>
+                <li><a href="#">메뉴 1-2</a></li>
+                <li><a href="#">메뉴 1-3</a></li>
+                <li><a href="#">메뉴 1-4</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">메뉴 2-1</a></li>
+                <li><a href="#">메뉴 2-2</a></li>
+                <li><a href="#">메뉴 2-3</a></li>
+                <li><a href="#">메뉴 2-4</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">메뉴 3-1</a></li>
+                <li><a href="#">메뉴 3-2</a></li>
+                <li><a href="#">메뉴 3-3</a></li>
+                <li><a href="#">메뉴 3-4</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">메뉴 4-1</a></li>
+                <li><a href="#">메뉴 4-2</a></li>
+                <li><a href="#">메뉴 4-3</a></li>
+                <li><a href="#">메뉴 4-4</a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+수업 Review
+
+script 시작은 항상!!
+    window.onload = function () {}      --> 익명 함수
+
+JavaScript의 모든 이벤트는 on으로 시작

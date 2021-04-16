@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>마우스 over-out 이벤트 예제</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        div {
+            padding: 30px;
+            border: 5px solid black;
+        }
+
+        p {
+            background-color: darksalmon;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var div = document.getElementById("div");
+
+            /* 
+                mouseover - mouseout 이벤트는 항상 같이 선언해줄것!
+
+                ** mouseover의 치명적인 문제점
+                    다른 영역 위로 올라갈 경우, mouse-out이벤트 실행되어 드롭다운 메뉴 등에서 메뉴가 닫혀버리는 경우가 생김
+            */
+
+            // 마우스 커서가 해당영역 위로 올라갔을 때 이벤트 실행
+            div.onmouseover = function() {
+                div.style.border = "5px solid red";
+            }
+
+            // 마우스 커서가 해당영역 밖으로 나갔을 때 이벤트 실행
+            div.onmouseout = function() {
+                div.style.border = "5px solid black";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div">
+        <p id="p">내용</p>
+    </div>
+</body>
+
+</html>

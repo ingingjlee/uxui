@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>더블클릭 이벤트 예제</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        function eventClick() {
+            console.log("클릭 이벤트");
+        }
+
+        function eventDblClick() {
+            console.log("더블 클릭 이벤트");
+        }
+
+        window.onload = function() {
+            // h1 태그를 아이디 선택자로 선택
+            var h1 = document.getElementById("h1");
+
+            h1.onclick = eventClick;      // 이벤트 함수를 변수처럼 취급 ==> eventClick함수를 onclick 이벤트에 저장(저장할 때는 괄호 생략)
+            h1.ondblclick = eventDblClick;
+            h1.ondblclick();    // 더블클릭 이벤트 강제 실행
+        }
+    </script>
+</head>
+<body>
+    <h1 id="h1">제목 태그</h1>
+</body>
+</html>

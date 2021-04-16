@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>마우스 out-leave 이벤트 예제</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        div { border:  1px solid grey; }
+    </style>
+    <script>
+        window.onload = function() {
+            // box1, box2 선택
+            var box1 = document.getElementById("box1"), box2 = document.getElementById("box2");
+
+            // onmouseout 이벤트는 해당 태그의 자식태그 영역으로 이동해도 이벤트 발생
+            box1.onmouseout = function() {
+                this.style.backgroundColor = "red";
+            }
+
+            // onmouseleave 이벤트는 해당 태그 내부 전체에서 이동해도 이벤트 발생 x     --> 메뉴바에 이용
+            box2.onmouseleave = function() {
+                this.style.backgroundColor = "yellow";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>onmouseout 일때</h2>
+    <div id="box1">
+        <p><a href="#">링크</a></p>
+        <p><a href="#">링크</a></p>
+        <p><a href="#">링크</a></p>
+    </div>
+    <h2>onmouseleave 일때</h2>
+    <div id="box2">
+        <p><a href="#">링크</a></p>
+        <p><a href="#">링크</a></p>
+        <p><a href="#">링크</a></p>
+    </div>
+</body>
+</html>

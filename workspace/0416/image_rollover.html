@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>img rollover 이벤트 문제 01</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        img {
+            width: 480px;
+            height: 360px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var img = document.getElementById("img");
+
+            // onmouseover 이벤트
+            img.onmouseover = function() {
+                this.src = "/coffee1.jpg";
+            }
+
+            // onmouseout 이벤트
+            img.onmouseout = function() {
+                this.src = "/jellyfish.jpg";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- 
+        1. onmouseover일때, 이미지 변경
+        2. onmouseout일때, 원본 이미지로 변경
+
+        -------
+        발생 문제 ) A(기존 img)가 b(변경 img)의 사이즈보다 작을 경우, 마우스 이벤트 out이벤트가 동시에 발생할 수 있다
+        // 해결방법
+            1. 동일한 img 사이즈를 사용할 것
+            2. css 속성으로 크기 강제 지정
+     -->
+    <img src="/jellyfish.jpg" alt="img" id="img">
+</body>
+</html>

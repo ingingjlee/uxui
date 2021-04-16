@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>마우스 enter-leave 이벤트 예제</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        div {
+            padding: 30px;
+            border: 5px solid black;
+        }
+
+        p {
+            background-color: darksalmon;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var div = document.getElementById("div");
+
+            /* 
+                mouseenter-mouseleave 이벤트는 항상 같이 선언해줄것!
+            */
+
+            // 
+            div.onmouseenter = function() {
+                div.style.border = "5px solid red";
+            }
+
+            // 
+            div.onmouseleave = function() {
+                div.style.border = "5px solid black";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div">
+        <p id="p">내용</p>
+    </div>
+</body>
+
+</html>
